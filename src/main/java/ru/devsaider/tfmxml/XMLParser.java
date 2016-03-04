@@ -27,7 +27,7 @@ public class XMLParser {
 
     public static String fetchSingle(int mapCode) throws IOException {
         Document doc = Jsoup.connect("http://api.micetigri.fr/maps/@" + String.valueOf(mapCode))
-                .userAgent("Devsaider XML parser/1.0")
+                .userAgent("Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36")
                 .get();
         String cryptedXML;
         Pattern p = Pattern.compile("(?is)map:\"(.*?)\",");
